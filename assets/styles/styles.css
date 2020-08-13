@@ -127,8 +127,8 @@ h6 {
 .fa:hover {
   cursor: pointer;
   background-color: #e43f6f;
+  border-radius: 55%;
   color: white;
-  border-radius: 50%;
   transition: 0.4s ease-in;
 }
 
@@ -302,6 +302,10 @@ h6 {
   color: #fff;
 }
 
+#footer-cta i {
+  color: #fff;
+}
+
 #footer-cta a:hover {
   background: #fff;
   color: #e43f6f;
@@ -309,10 +313,19 @@ h6 {
     0 4px 14px 1px rgba(0, 0, 0, 0.15);
 }
 
+#startButtonDiv i:hover{
+  color: #e43f6f;
+}
+
 /*** footer starts ***/
 
 #footer {
-  padding: 5em 4em 2em;
+  padding: 4em 4em 2em;
+}
+
+#footer a{
+  text-decoration: none;
+  color: white;
 }
 
 #footer #logo {
@@ -327,7 +340,7 @@ h6 {
 }
 
 #footer #copyright {
-  margin-top: 1.6em;
+  margin-top: 1.2em;
   font-family: "Maven pro", sans-serif;
   font-weight: 500;
   color: #111;
