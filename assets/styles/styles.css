@@ -318,6 +318,13 @@ h6 {
   color: #e43f6f;
 }
 
+@media screen and (max-width: 518px) {
+  #startButtonDiv {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /*** footer starts ***/
 
 #footer {
