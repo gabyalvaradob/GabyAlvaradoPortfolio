@@ -199,8 +199,9 @@ h6 {
   margin-bottom: 5.5em;
 }
 
-#work img {
-	transition: transform 450ms ease;
+#work img,
+#experience i {
+  transition: transform 450ms ease;
 }
 
 #work img:hover {
@@ -208,14 +209,18 @@ h6 {
   opacity: 1;
 }
 
+#experience i:hover {
+  transform: scale(1.1);
+}
+
 .details h3 {
   color: #575555;
   text-transform: uppercase;
 }
 
-.title-work a{
-	text-decoration: none !important; 
-  }
+.title-work a {
+  text-decoration: none !important;
+}
 
 .details .platform {
   font-size: 0.8em;
@@ -249,7 +254,8 @@ h6 {
 
 .details a:hover,
 .details a:focus {
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 14px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+    0 4px 14px 1px rgba(0, 0, 0, 0.15);
   background-color: #e43f6f !important;
   color: #fff;
 }
@@ -319,7 +325,8 @@ h6 {
 }
 
 @media screen and (max-width: 518px) {
-  #startButtonDiv {
+  #startButtonDiv,
+  .resumeButtonsDiv {
     display: flex;
     flex-direction: column;
   }
@@ -331,7 +338,7 @@ h6 {
   padding: 4em 4em 2em;
 }
 
-#footer a{
+#footer a {
   text-decoration: none;
   color: white;
 }
@@ -354,6 +361,12 @@ h6 {
   color: #111;
 }
 
+.footer-socialmedia {
+  padding-top: 22px;
+  font-size: 24px;
+  padding-bottom: 15px;
+}
+
 .profile-photo {
   width: 200px;
   height: 200px;
@@ -362,4 +375,25 @@ h6 {
   background-size: cover;
   margin-top: -100px;
   margin-bottom: 40px;
+}
+
+.resume-container {
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+.resumeButtonsDiv {
+  text-align: center;
+}
+
+.resumeButtonsDiv a {
+  border: 2px solid #fff;
+  border-radius: 45px;
+  color: #fff;
+}
+.resumeButtonsDiv a:hover {
+  background: #fff;
+  color: #2c0735;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+    0 4px 14px 1px rgba(0, 0, 0, 0.15);
 }

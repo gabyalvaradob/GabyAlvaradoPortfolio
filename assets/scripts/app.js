@@ -1,21 +1,21 @@
-const Portfolio = function() {
+const Portfolio = function () {
 	function makeWords() {
 		var words = [
 			{
-				text: "marketing",
-				weight: 18.3
+				text: "Marketing",
+				weight: 18
 			}, {
-				text: "Phone sales",
+				text: "HTML",
 				weight: 15
 			}, {
-				text: "javascript",
-				weight: 13
+				text: "Javascript",
+				weight: 19
 			}, {
 				text: "cybersecurity",
-				weight: 11
+				weight: 15
 			}, {
 				text: "programming",
-				weight: 12
+				weight: 16
 			}, {
 				text: "sales",
 				weight: 17
@@ -26,10 +26,13 @@ const Portfolio = function() {
 				text: "Math",
 				weight: 15
 			}, {
-				text: "Personal finances",
-				weight: 19
-			},{
-				text: "Business adminitration",
+				text: "Personal finance",
+				weight: 18
+			}, {
+				text: "React",
+				weight: 18
+			}, {
+				text: "Business administration",
 				weight: 16
 			}
 		];
@@ -37,12 +40,12 @@ const Portfolio = function() {
 	}
 
 	function makeWordCloud(words) {
-		$('.teaching-domains').jQCloud(words, {delay: 130});
+		$('.teaching-domains').jQCloud(words, { delay: 130 });
 	}
 
 	function displayWordCloud() {
 		var count = 1;
-		$(window).on('scroll', function() {
+		$(window).on('scroll', function () {
 			var y_scroll_pos = window.pageYOffset;
 			var scroll_pos_test = 2700; // set to whatever you want it to be
 			var words = makeWords();
@@ -67,11 +70,11 @@ const Portfolio = function() {
 			// typing speed
 			typeSpeed: 1,
 			contentType: 'text',
-			callback: function() {
-				$("#writing-text").css({"color": "#fff", "background-color": "#E43F6F"});
+			callback: function () {
+				$("#writing-text").css({ "color": "#fff", "background-color": "#E43F6F" });
 			},
-			preStringTyped: function() {},
-			onStringTyped: function() {}
+			preStringTyped: function () { },
+			onStringTyped: function () { }
 		});
 	}
 
@@ -85,3 +88,19 @@ const Portfolio = function() {
 
 Portfolio.displayWordCloud();
 Portfolio.typeAnimation();
+
+gsap.registerPlugin(ScrollTrigger);
+// gsap.from("#wordsMap", { duration: 3, x: 300, opacity: 0, scale: 0.5, ease: "slow.in" });
+
+gsap.to("#wordsMap", {
+	scrollTrigger: {
+		trigger: "#wordsMap",
+		toggleActions: "restart pause reverse pause",
+		scrub: true,
+	},
+	duration: 3,
+	opacity: 0.8,
+	scale: 1.3, 
+	ease: "slow.in"
+	}
+  );
